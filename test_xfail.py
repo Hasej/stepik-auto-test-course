@@ -5,7 +5,7 @@ def test_succeed():
     assert True
 
 
-@pytest.mark.xfail(strict = False)
+@pytest.mark.xfail(run = True)
 def test_not_succeed():
     assert False
 
