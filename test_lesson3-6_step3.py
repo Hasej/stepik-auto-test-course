@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import time
 import math
+import pytest
 
 @pytest.fixture(scope="function")
 def browser():
@@ -23,9 +24,9 @@ lessons = [
     ("236904"),
     ("236905")
 ]
-    @pytest.mark.parametrize('lesson', ["ru", "en-gb"])
+    @pytest.mark.parametrize("lesson", lessons)
     def test_get_correct_answer (browser, lesson):
-        link = f"https://stepik.org/lesson/{lesson}/step/1"
+        link = f"https://stepik.org/lesson/{}/step/1".format(code)
         browser.get(link)
 
 
